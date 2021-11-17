@@ -10,9 +10,16 @@ public class Boundary
 }
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement")]
     public float speed;
     public float tilt;
     public Boundary boundary;
+
+    [Header("Shot")]
+    public GameObject shot;
+    public Transform ShotSpawm;
+    public float fireRate;
+    private float nextFire;
    
 
     private Rigidbody rig;
@@ -41,6 +48,11 @@ public class PlayerController : MonoBehaviour
   
     void Update()
     {
-        
+        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(shot, ShotSpawm.position, Quaternion.identity);
+
+        }
     }
 }
