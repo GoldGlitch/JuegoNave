@@ -38,7 +38,7 @@ public class Done_GameController : MonoBehaviour
 			if (Input.GetKeyDown (KeyCode.R))
 			{
 				SceneManager.LoadScene(0);
-				Application.LoadLevel (Application.loadedLevel);
+				
 			}
 		}
 	}

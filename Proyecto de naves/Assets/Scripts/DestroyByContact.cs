@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class DestroyByContact : MonoBehaviour
 {
-    public GameController gameController;
+    private GameController gameController;
     public GameObject explosion;
     public GameObject playerExplosion;
+    public int ScoreValue;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Boundary")) { return; }
@@ -18,12 +20,19 @@ public class DestroyByContact : MonoBehaviour
             gameController.GameOver();
         }
         
+        gameController.AddScore(ScoreValue);
         Destroy(other.gameObject);
         Destroy(gameObject);
+
     }
-    private void OnEnable()
+    private void Start()
     {
+        GameObject gameControllerObject = GameObject.FindWithTag("GameController"); 
+
         gameController = FindObjectOfType<GameController>();
+        GameObject.FindWithTag("GameController").GetComponent<GameController>();
+
     }
+
 
 }
