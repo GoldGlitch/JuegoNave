@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Done_GameController : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class Done_GameController : MonoBehaviour
 		{
 			if (Input.GetKeyDown (KeyCode.R))
 			{
+				SceneManager.LoadScene(0);
 				Application.LoadLevel (Application.loadedLevel);
 			}
 		}

@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
     public Transform ShotSpawm;
     public float fireRate;
     private float nextFire;
+
+    [Header("Music")]
+    private AudioSource audioSource;
    
 
     private Rigidbody rig;
@@ -27,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rig = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -52,7 +56,7 @@ public class PlayerController : MonoBehaviour
         {
             nextFire = Time.time + fireRate;
             Instantiate(shot, ShotSpawm.position, Quaternion.identity);
-
+            audioSource.Play();
         }
     }
 }

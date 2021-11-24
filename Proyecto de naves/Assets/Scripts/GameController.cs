@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -10,20 +12,36 @@ public class GameController : MonoBehaviour
     public float spawnWait;
     public float startWait;
     public float waveWait;
-    
+
+
+    public Text restartText;
+    public Text gameOverText;
+    private bool restart;
+    private bool gameOver;
+
     void Start()
     {
+        restart = false;
+        gameOver = false;
+        gameOverText.gameObject.SetActive(false);
+        restartText.gameObject.SetActive(false);
        StartCoroutine(SpawnWaves());
 
 
     }
+    private void Update()
+    {
+        if(restart && Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 
-    
     IEnumerator SpawnWaves()
     {
         yield return new WaitForSeconds(startWait);
 
-        while (true)
+        while (!gameOver)
         {
             for (int i = 0; i < hazardCount; i++)
             {
@@ -33,7 +51,15 @@ public class GameController : MonoBehaviour
             }
             yield return new WaitForSeconds(waveWait);
         }
-       
-       
+        restartText.gameObject.SetActive(true);
+        restart = true;
+
+
+    }
+    public void GameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
+        gameOver = true;
+
     }
 }
