@@ -11,9 +11,14 @@ public class DestroyByContact : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Boundary")) { return; }
+        if(other.CompareTag("Boundary") || other.CompareTag("Enemy")) { return; }
 
-        Instantiate(explosion, transform.position, transform.rotation);
+        if(explosion != null)
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+        }
+
+        
         if (other.CompareTag("Player"))
         {
             Instantiate(playerExplosion, other.transform.position, other.transform.rotation);

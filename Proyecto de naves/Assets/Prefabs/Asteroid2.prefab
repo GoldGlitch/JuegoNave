@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 8242765296108343322}
   m_Layer: 0
   m_Name: Asteroid2
-  m_TagString: GameController
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
