@@ -4745,6 +4745,7 @@ GameObject:
   - component: {fileID: 5220136910191238811}
   - component: {fileID: 5220136910191238809}
   - component: {fileID: 5220136910191238808}
+  - component: {fileID: 1018848694}
   m_Layer: 0
   m_Name: EnemyShip 1
   m_TagString: Enemy
@@ -4939,6 +4940,29 @@ MonoBehaviour:
   showSpawm: {fileID: 1525093982579135738}
   fireRate: 1
   delay: 0.5
+--- !u!114 &1018848694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5220136910191238814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd935004b8b56d94ebb0f5c3863f6042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWait: {x: 0.5, y: 1}
+  dodge: 5
+  smoothing: 10
+  ManeuverTime: {x: 1, y: 2}
+  ManeuverWait: {x: 1, y: 2}
+  boundary:
+    xMin: 0
+    xMax: 0
+    zMin: 0
+    zMax: 0
+  tilt: 10
 --- !u!1 &5220136911204272115
 GameObject:
   m_ObjectHideFlags: 0
