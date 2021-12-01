@@ -13,20 +13,24 @@ public class GameController : MonoBehaviour
     public float startWait;
     public float waveWait;
 
-    private int score;
+    public int score;
+    
     public Text scoreText;
 
 
     public GameObject restartGameObject;
     public GameObject gameOverGameObject;
-    private bool restart;
-    private bool gameOver;
+    public bool restart;
+    public bool gameOver;
+    private bool EnterNameDialogSatate;
 
     void Start()
     {
         UpdatespawnValues();
         restart = false;
         gameOver = false;
+       
+        EnterNameDialogSatate = true;
         gameOverGameObject.SetActive(false);
         restartGameObject.SetActive(false);
        StartCoroutine(SpawnWaves());
@@ -45,9 +49,27 @@ public class GameController : MonoBehaviour
     }
     private void Update()
     {
-        if(restart && Input.GetKeyDown(KeyCode.R))
+        Pausa();
+
+        if (restart && Input.GetKeyDown(KeyCode.R))
         {
             Restart();
+        }
+        
+    }
+    private void Pausa()
+    {
+        if (gameOver == true)
+        {
+            Time.timeScale = 0.2f;
+        }
+        if (EnterNameDialogSatate == true)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
         }
     }
     public void Restart()
@@ -74,9 +96,14 @@ public class GameController : MonoBehaviour
 
 
     }
+    public void Close()
+    {
+        EnterNameDialogSatate = false;
+    }
     public void GameOver()
     {
         gameOverGameObject.SetActive(true);
+        
         gameOver = true;
 
     }
