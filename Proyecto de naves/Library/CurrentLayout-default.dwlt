@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 335
     height: 676
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -238,8 +238,8 @@ MonoBehaviour:
     y: 0
     width: 847
     height: 676
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -292,8 +292,8 @@ MonoBehaviour:
     y: 0
     width: 315
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -420,23 +420,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c2edffff
-      m_LastClickedID: -4670
-      m_ExpandedIDs: faebffff20eeffff22eeffffc83a0000d63a0000423b0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: e0ecffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: SCORE
-        m_OriginalName: SCORE
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 15092
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 3}
       m_SearchString: 
@@ -482,9 +482,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.047646612, y: -0.012033448, z: 8.0840845}
+    m_Target: {x: 0.017510414, y: -9.9863, z: 1.8936005}
     speed: 2
-    m_Value: {x: 0.047646612, y: -0.012033448, z: 8.0840845}
+    m_Value: {x: 0.017510414, y: -9.9863, z: 1.8936005}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -530,13 +530,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.014393329, y: -0.023995211, z: 0.0003455057, w: 0.999609}
+    m_Target: {x: 0.67678696, y: 0.0033128033, z: -0.0030455517, w: 0.73616606}
     speed: 2
-    m_Value: {x: 0.01439332, y: -0.023995196, z: 0.00034550548, w: 0.9996084}
+    m_Value: {x: 0.67568153, y: 0.0033173661, z: -0.0030405773, w: 0.73718}
   m_Size:
-    m_Target: 0.81840634
+    m_Target: 19.00658
     speed: 2
-    m_Value: 0.81840634
+    m_Value: 19.00653
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -632,14 +632,15 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Prefabs
   m_LastFoldersGridSize: 90
-  m_LastProjectPath: C:\Users\kenne\Documents\GitHub\JuegoNave\Proyecto de naves
+  m_LastProjectPath: E:\Trabajo de unity\Repositorio kenner\JuegoNave\Proyecto de
+    naves
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 158}
-    m_SelectedIDs: d63c0000
-    m_LastClickedID: 15574
-    m_ExpandedIDs: 00000000b63c0000b83c0000ba3c0000bc3c0000be3c0000c03c0000ca3c000000ca9a3b
+    scrollPos: {x: 0, y: 109}
+    m_SelectedIDs: fe3c0000
+    m_LastClickedID: 15614
+    m_ExpandedIDs: 00000000d23c0000d43c0000d63c0000d83c0000da3c0000dc3c0000de3c0000fe3c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -667,7 +668,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: d63d0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b63c0000b83c0000ba3c0000bc3c0000be3c0000c03c0000
+    m_ExpandedIDs: 00000000d23c0000d43c0000d63c0000d83c0000da3c0000dc3c0000de3c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -719,7 +720,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 56}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 90
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 166
