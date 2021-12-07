@@ -23,13 +23,16 @@ public class GameController : MonoBehaviour
     public bool restart;
     public bool gameOver;
     private bool EnterNameDialogSatate;
+    public GameObject menu;
+    public bool MenuAbierto;
 
     void Start()
     {
         UpdatespawnValues();
         restart = false;
         gameOver = false;
-       
+
+        MenuAbierto = false;
         EnterNameDialogSatate = true;
         gameOverGameObject.SetActive(false);
         restartGameObject.SetActive(false);
@@ -72,6 +75,15 @@ public class GameController : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
+    public void MenuPause()
+    {
+        if(MenuAbierto == true)
+        {
+            Time.timeScale = 0f;
+        }
+        
+
+    }
     public void Restart()
     {
         SceneManager.LoadScene(0);
@@ -107,6 +119,13 @@ public class GameController : MonoBehaviour
         gameOver = true;
 
     }
+    public void MenuActive()
+    {
+        menu.SetActive(true);
+
+        MenuAbierto = true;
+
+    }
     public void AddScore(int value)
     {
         score += value;
@@ -116,4 +135,5 @@ public class GameController : MonoBehaviour
     {
         scoreText.text = "Score : "  + score;
     }
+
 }
