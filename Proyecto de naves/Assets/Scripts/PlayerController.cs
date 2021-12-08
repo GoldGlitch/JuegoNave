@@ -6,7 +6,6 @@ using UnityStandardAssets.CrossPlatformInput;
 [System.Serializable]
 public class Boundary
 {
-
     public float xMin, xMax, zMin, zMax;
 }
 public class PlayerController : MonoBehaviour
@@ -21,13 +20,8 @@ public class PlayerController : MonoBehaviour
     public Transform ShotSpawm;
     public float fireRate;
     private float nextFire;
-
-    [Header("Music")]
     private AudioSource audioSource;
-   
-
     private Rigidbody rig;
-   
     private void Awake()
     {
         rig = GetComponent<Rigidbody>();
@@ -49,7 +43,6 @@ public class PlayerController : MonoBehaviour
 
         
     }
-
     private void FixedUpdate()
     {
         float moveHorizontal = CrossPlatformInputManager.GetAxis("Horizontal");
@@ -61,8 +54,6 @@ public class PlayerController : MonoBehaviour
         rig.rotation = Quaternion.Euler(-90f, 0, rig.velocity.x * tilt);
     }
 
-
-  
     void Update()
     {
         if (CrossPlatformInputManager.GetButton("Fire1") && Time.time > nextFire)

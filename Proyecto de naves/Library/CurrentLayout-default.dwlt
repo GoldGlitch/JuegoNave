@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 879, y: 492}
   m_MaxSize: {x: 16004, y: 14042}
   vertical: 1
-  controlID: 2261
+  controlID: 57
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 879, y: 492}
   m_MaxSize: {x: 16004, y: 14042}
   vertical: 0
-  controlID: 2262
+  controlID: 58
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 603, y: 492}
   m_MaxSize: {x: 12003, y: 14042}
   vertical: 1
-  controlID: 2263
+  controlID: 59
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_MinSize: {x: 603, y: 221}
   m_MaxSize: {x: 12003, y: 4021}
   vertical: 0
-  controlID: 2264
+  controlID: 60
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -478,9 +478,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 361.35654, y: 490.52136, z: 47.57483}
+    m_Target: {x: 1.3512694, y: -0.27260208, z: -0.8544017}
     speed: 2
-    m_Value: {x: 361.35654, y: 490.52136, z: 47.57483}
+    m_Value: {x: 1.3512694, y: -0.27260208, z: -0.8544017}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -526,17 +526,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.014397384, y: 0.0044995258, z: -0.0000648006, w: 0.9998867}
+    m_Target: {x: 0.65099776, y: -0.0011385547, z: 0.0009765979, w: 0.75908035}
     speed: 2
-    m_Value: {x: 0.014397377, y: 0.0044995234, z: -0.00006480057, w: 0.9998862}
+    m_Value: {x: 0.6509967, y: -0.0011385528, z: 0.0009765963, w: 0.7590791}
   m_Size:
-    m_Target: 615.93024
+    m_Target: 17.908327
     speed: 2
-    m_Value: 615.93024
+    m_Value: 17.908327
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -586,23 +586,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4c380000
-      m_LastClickedID: 0
-      m_ExpandedIDs: a8cbffffdad1ffff6afbffffcc500000e650000016510000
+      m_SelectedIDs: 1ae4ffff
+      m_LastClickedID: -7142
+      m_ExpandedIDs: 4ee4ffff8cf3ffff8cf4ffffcef5ffff00f8ffff64f8ffff98f8ffff6afbffff103b0000f83b0000123c0000e63f00000040000030400000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Quit Button
-        m_OriginalName: Quit Button
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 20828
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 11}
       m_SearchString: 
@@ -651,20 +651,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 90
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: 90
   m_LastProjectPath: E:\Trabajo de unity\Repositorio kenner\JuegoNave\Proyecto de
     naves
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 154}
-    m_SelectedIDs: 42380000
-    m_LastClickedID: 14402
+    scrollPos: {x: 0, y: 170}
+    m_SelectedIDs: 46380000
+    m_LastClickedID: 14406
     m_ExpandedIDs: 00000000f8370000fa370000fc370000fe3700000038000002380000043800000638000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -693,7 +693,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: d63d0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f8370000fa370000fc370000fe3700000038000002380000043800000638000000ca9a3b
+    m_ExpandedIDs: 00000000f8370000fa370000fc370000fe37000000380000023800000438000006380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -745,7 +745,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 56}
     m_GridSize: 90
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 166
@@ -812,7 +812,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 306
+  m_LastVerticalScrollValue: 0
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
