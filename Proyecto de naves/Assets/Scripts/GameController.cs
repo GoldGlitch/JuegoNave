@@ -70,7 +70,7 @@ public class GameController : MonoBehaviour
         {
             Time.timeScale = 0f;
         }
-        else
+        else if(MenuAbierto==false)
         {
             Time.timeScale = 1f;
         }
@@ -80,9 +80,9 @@ public class GameController : MonoBehaviour
         if(MenuAbierto == true)
         {
             Time.timeScale = 0f;
+            Debug.Log(Time.timeScale);
         }
         
-
     }
     public void Restart()
     {
@@ -124,7 +124,7 @@ public class GameController : MonoBehaviour
         menu.SetActive(true);
 
         MenuAbierto = true;
-
+        MenuPause();
     }
     public void AddScore(int value)
     {

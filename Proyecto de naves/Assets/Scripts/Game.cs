@@ -9,6 +9,7 @@ public class Game : MonoBehaviour
     public void OnEnable()
     {
         Time.timeScale = 0f;
+        
 
     }
     private void OnDisable()
