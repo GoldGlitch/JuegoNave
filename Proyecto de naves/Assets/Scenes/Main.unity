@@ -2536,7 +2536,7 @@ GameObject:
   - component: {fileID: 1418110670}
   - component: {fileID: 1418110669}
   m_Layer: 5
-  m_Name: Button
+  m_Name: PauseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3439,7 +3439,7 @@ GameObject:
   - component: {fileID: 2086843178}
   - component: {fileID: 2086843182}
   m_Layer: 5
-  m_Name: MenuPrincipal
+  m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3857,6 +3857,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RankingManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659539075533508315, guid: 44d1653089265e14fa72d7aa8887c0bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d1653089265e14fa72d7aa8887c0bc, type: 3}

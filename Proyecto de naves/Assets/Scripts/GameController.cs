@@ -47,8 +47,6 @@ public class GameController : MonoBehaviour
         Vector2 half = Utils.GetHalfDimensionsInWorldUnits();
         spawnValues = new Vector3(half.x -0.9f, 0f, half.y + 8f);
 
-
-
     }
     private void Update()
     {
