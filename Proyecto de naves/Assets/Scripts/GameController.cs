@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public GameObject[] hazards;
+    public GameObject[] EnemyShips;
     public Vector3 spawnValues;
     public int hazardCount;
     public float spawnWait;
@@ -14,6 +15,10 @@ public class GameController : MonoBehaviour
     public float waveWait;
 
     public int score;
+    private int contadorAsteroides;
+    private int enemyShipCount;
+    private int contadorOleadas;
+ 
     
     public Text scoreText;
 
@@ -28,6 +33,9 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        contadorAsteroides = 3;
+        enemyShipCount = 0;
+        
         UpdatespawnValues();
         restart = false;
         gameOver = false;
@@ -57,6 +65,7 @@ public class GameController : MonoBehaviour
             Restart();
         }
         
+        
     }
     private void Pausa()
     {
@@ -82,6 +91,7 @@ public class GameController : MonoBehaviour
         }
         
     }
+  
     public void Restart()
     {
         SceneManager.LoadScene(0);
@@ -92,14 +102,35 @@ public class GameController : MonoBehaviour
 
         while (!gameOver)
         {
-            for (int i = 0; i < hazardCount; i++)
+            
+            for (int i = 0; i < contadorAsteroides/*hazardCount*/; i++)
             {
+                //GameObject hazard = hazards[Random.Range(0, hazards.Length)];
                 GameObject hazard = hazards[Random.Range(0, hazards.Length)];
                 Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 Instantiate(hazard, spawnPosition, Quaternion.identity);
                 yield return new WaitForSeconds(spawnWait);
             }
+            if (contadorOleadas == 3)
+            {
+                contadorOleadas = 0;
+                enemyShipCount = enemyShipCount + 1;
+                for (int i = 0; i < enemyShipCount; i++)
+                {
+                    //GameObject hazard = hazards[Random.Range(0, hazards.Length)];
+                    GameObject enemyShip = EnemyShips[Random.Range(0, EnemyShips.Length)];
+                    Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+                    Instantiate(enemyShip, spawnPosition, Quaternion.identity);
+                    yield return new WaitForSeconds(spawnWait);
+                }
+            }
+            
             yield return new WaitForSeconds(waveWait);
+            contadorAsteroides = contadorAsteroides + 1;
+            contadorOleadas = contadorOleadas + 1;
+           
+
+
         }
         restartGameObject.SetActive(true);
         restart = true;
