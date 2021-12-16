@@ -39,7 +39,7 @@ public class Volume : MonoBehaviour
     }
     void SetSFXVolumen(float value)
     {
-        mixer.SetFloat(MIXER_SFX, Mathf.Log10(value) * 20);
+        mixer.SetFloat(MIXER_SFX ,Mathf.Log10(value) * 20);
 
     }
 }

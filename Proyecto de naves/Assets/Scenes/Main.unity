@@ -2593,7 +2593,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1152146187}
   - component: {fileID: 1152146186}
-  - component: {fileID: 1152146185}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2601,14 +2600,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1152146185
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1152146184}
-  m_Enabled: 1
 --- !u!20 &1152146186
 Camera:
   m_ObjectHideFlags: 0
@@ -3539,7 +3530,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488340309}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6687876241181162729, guid: 6e56cba36e071ff4b83a0fd6ddecbe20,
     type: 2}
@@ -4330,6 +4321,7 @@ GameObject:
   - component: {fileID: 2086843179}
   - component: {fileID: 2086843178}
   - component: {fileID: 2086843182}
+  - component: {fileID: 2086843183}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -4430,6 +4422,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37befb8c747e6f439b246655020909a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2086843183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086843177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6447ec6f7e662b84aa162f8c1d2c981d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 6e56cba36e071ff4b83a0fd6ddecbe20, type: 2}
+  musciSlider: {fileID: 1023625024}
+  sfxSlider: {fileID: 335452548}
 --- !u!1 &2087159145
 GameObject:
   m_ObjectHideFlags: 0
@@ -4934,7 +4941,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
-      objectReference: {fileID: 6687876241181162729, guid: 6e56cba36e071ff4b83a0fd6ddecbe20,
+      objectReference: {fileID: -5859052291486847560, guid: 6e56cba36e071ff4b83a0fd6ddecbe20,
         type: 2}
     - target: {fileID: 4279395490176610205, guid: ae07bd90ec317e041871dcd8455760c1,
         type: 3}
