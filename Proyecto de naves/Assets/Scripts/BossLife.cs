@@ -24,7 +24,7 @@ public class BossLife : MonoBehaviour
         {
             numeroDisparos = numeroDisparos + 1;
             gameController.AddScore(ScoreValue);
-            if (numeroDisparos == 10)
+            if (numeroDisparos == 5)
             {
                 Instantiate(explosion, transform.position, transform.rotation);
                 gameController.Win();

@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour
     public bool restart;
     public bool gameOver;
     public bool Winner;
+    private bool boss;
     
     public GameObject menu;
     public bool MenuAbierto;
@@ -50,6 +51,7 @@ public class GameController : MonoBehaviour
         restart = false;
         gameOver = false;
         Winner = false;
+        boss = true;
 
         MenuAbierto = false;
         
@@ -76,7 +78,9 @@ public class GameController : MonoBehaviour
         {
             Restart();
         }
-        
+
+
+        Debug.Log(contadorOleadas2);
         
     }
     private void Pausa()
@@ -116,41 +120,63 @@ public class GameController : MonoBehaviour
 
         while (!gameOver || !Winner)
         {
+            if (contadorOleadas2 <= 10)
+            {
+                for (int i = 0; i < contadorAsteroides/*hazardCount*/; i++)
+                {
+                    //GameObject hazard = hazards[Random.Range(0, hazards.Length)];
+                    GameObject hazard = hazards[Random.Range(0, hazards.Length)];
+                    Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+                    Instantiate(hazard, spawnPosition, Quaternion.identity);
+                    yield return new WaitForSeconds(spawnWait);
+                }
+                if (contadorOleadas == 3)
+                {
+                    contadorOleadas = 0;
+                    enemyShipCount = enemyShipCount + 1;
+                    for (int i = 0; i < enemyShipCount; i++)
+                    {
+                        //GameObject hazard = hazards[Random.Range(0, hazards.Length)];
+                        GameObject enemyShip = EnemyShips[Random.Range(0, EnemyShips.Length)];
+                        Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+                        Instantiate(enemyShip, spawnPosition, Quaternion.identity);
+                        yield return new WaitForSeconds(spawnWait);
+                    }
+                }
+
+            }
+            else
+            {
+                if (contadorOleadas2 >= 10)
+                {
+                   
+
+
+                    if (boss)
+                    {
+                        GameObject enemyBoss = Boss[Random.Range(0, Boss.Length)];
+                        Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+                        Instantiate(enemyBoss, spawnPosition, Quaternion.identity);
+                        yield return new WaitForSeconds(spawnWait);
+                        boss = false;
+                    }
+
+                    /*
+                    //contadorOleadas2 = 0;
+                    //bossCount = 1;
+                    for (int i = 0; i < 1; i++)
+                    {
+                        //GameObject hazard = hazards[Random.Range(0, hazards.Length)];
+                        GameObject enemyBoss = Boss[Random.Range(0, Boss.Length)];
+                        Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+                        Instantiate(enemyBoss, spawnPosition, Quaternion.identity);
+                        yield return new WaitForSeconds(spawnWait);
+                    }*/
+                }
+
+            }
             
-            for (int i = 0; i < contadorAsteroides/*hazardCount*/; i++)
-            {
-                //GameObject hazard = hazards[Random.Range(0, hazards.Length)];
-                GameObject hazard = hazards[Random.Range(0, hazards.Length)];
-                Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
-                Instantiate(hazard, spawnPosition, Quaternion.identity);
-                yield return new WaitForSeconds(spawnWait);
-            }
-            if (contadorOleadas == 3)
-            {
-                contadorOleadas = 0;
-                enemyShipCount = enemyShipCount + 1;
-                for (int i = 0; i < enemyShipCount; i++)
-                {
-                    //GameObject hazard = hazards[Random.Range(0, hazards.Length)];
-                    GameObject enemyShip = EnemyShips[Random.Range(0, EnemyShips.Length)];
-                    Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
-                    Instantiate(enemyShip, spawnPosition, Quaternion.identity);
-                    yield return new WaitForSeconds(spawnWait);
-                }
-            }
-            if (contadorOleadas2 == 10)
-            {
-                contadorOleadas2 = 0;
-                bossCount = bossCount + 1;
-                for (int i = 0; i < bossCount; i++)
-                {
-                    //GameObject hazard = hazards[Random.Range(0, hazards.Length)];
-                    GameObject enemyBoss = Boss[Random.Range(0, Boss.Length)];
-                    Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
-                    Instantiate(enemyBoss, spawnPosition, Quaternion.identity);
-                    yield return new WaitForSeconds(spawnWait);
-                }
-            }
+           
             yield return new WaitForSeconds(waveWait);
             contadorAsteroides = contadorAsteroides + 1;
             contadorOleadas = contadorOleadas + 1;

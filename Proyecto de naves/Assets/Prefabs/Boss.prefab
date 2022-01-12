@@ -16,6 +16,9 @@ GameObject:
   - component: {fileID: 101540407855705750}
   - component: {fileID: 5224238440213160670}
   - component: {fileID: 1486065019893383835}
+  - component: {fileID: 2775940708649554882}
+  - component: {fileID: 318336826}
+  - component: {fileID: 318336827}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -55,7 +58,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 36
   m_CollisionDetection: 0
 --- !u!136 &101540407855705739
 CapsuleCollider:
@@ -67,7 +70,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.6
+  m_Radius: 0.62
   m_Height: 2.83
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: -0.33}
@@ -78,7 +81,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101540407855705744}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fdec117d08f4cf4bbf62a716cc16adb, type: 3}
   m_Name: 
@@ -193,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77b97458e878354b88034d7a0110e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 6933891233398422381, guid: f34c3e456518f3344936ee393962d4ae, type: 3}
+  shot: {fileID: 8340597384284694209, guid: adc4abb0ac955dd44bb88f1da84f4754, type: 3}
   showSpawm: {fileID: 6643689402717168884}
   fireRate: 1
   delay: 0.5
@@ -234,6 +237,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 100012, guid: 384371afbb4354cc9a3fc68eab303756, type: 3}
   ScoreValue: 80
+  numeroDisparos: 0
+--- !u!114 &2775940708649554882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101540407855705744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488cce16b8285744ca4767e60fb2e30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -1
+  Timer: 6
+--- !u!136 &318336826
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101540407855705744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.66
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: -1.28, y: 0, z: 0.64}
+--- !u!136 &318336827
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101540407855705744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.67
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 1.16, y: -1.15, z: 0.69}
 --- !u!1 &101540408742426621
 GameObject:
   m_ObjectHideFlags: 0

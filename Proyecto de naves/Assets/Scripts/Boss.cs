@@ -41,7 +41,7 @@ public class Boss : MonoBehaviour
     {
         float newManeuver = Mathf.MoveTowards(rb.velocity.x, targetManeuver, Time.deltaTime * smoothing);
         rb.velocity = new Vector3(targetManeuver, 0.0f, rb.velocity.z);
-        rb.position = new Vector3(Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax), 0f, 11.267f);
+        rb.position = new Vector3(Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax), 0f, rb.position.z/*11.267f*/);
         rb.rotation = Quaternion.Euler(0f, 0, rb.velocity.x * -tilt);
     }
 

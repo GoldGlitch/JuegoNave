@@ -7,18 +7,19 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AudioManager
     - BackGroundScroll
+    - Boss
+    - BossLife
     - DestroyBoundary
     - DestroyByContact
     - DestroyByTime
     - EvasiveManiobre
     - Game
     - GameController
-    - HighScoreScript
     - Menu
     - Mover
+    - MoverBoss
     - PlayerController
     - RandomRotator
-    - RankingManager
     - Volume
     - WeaponController
     Unity.Rider.Editor.dll:
@@ -34,9 +35,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
-    - UnityEngine.UI.InputField
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
@@ -76,65 +75,63 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11230}
-    - Class: 114
       Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11236}
+      Script: {instanceID: 11254}
     - Class: 114
-      Script: {instanceID: 11296}
+      Script: {instanceID: 11324}
     - Class: 114
-      Script: {instanceID: 11366}
+      Script: {instanceID: 11420}
     - Class: 114
       Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11504}
+      Script: {instanceID: 11582}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 11662}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 11782}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 11832}
+      Script: {instanceID: 11900}
     - Class: 114
-      Script: {instanceID: 11896}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 11944}
+      Script: {instanceID: 12074}
     - Class: 114
-      Script: {instanceID: 11964}
+      Script: {instanceID: 12092}
     - Class: 114
-      Script: {instanceID: 12118}
+      Script: {instanceID: 12168}
     - Class: 114
-      Script: {instanceID: 12136}
+      Script: {instanceID: 12188}
     - Class: 114
-      Script: {instanceID: 12212}
+      Script: {instanceID: 12274}
     - Class: 114
-      Script: {instanceID: 12232}
+      Script: {instanceID: 12418}
     - Class: 114
-      Script: {instanceID: 12318}
+      Script: {instanceID: 12438}
     - Class: 114
-      Script: {instanceID: 12462}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12482}
-    - Class: 114
-      Script: {instanceID: 12630}
+      Script: {instanceID: 12702}
     - Class: 114
       Script: {instanceID: 12746}
     - Class: 114
-      Script: {instanceID: 12790}
+      Script: {instanceID: 12780}
     - Class: 114
-      Script: {instanceID: 13056}
+      Script: {instanceID: 12956}
     - Class: 114
-      Script: {instanceID: 13106}
+      Script: {instanceID: 13066}
     - Class: 114
-      Script: {instanceID: 13120}
+      Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 13150}
+      Script: {instanceID: 13110}
     - Class: 114
-      Script: {instanceID: 13166}
+      Script: {instanceID: 13126}
     - Class: 114
-      Script: {instanceID: 13182}
+      Script: {instanceID: 13142}
+    - Class: 114
+      Script: {instanceID: 33608}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -187,25 +184,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11296}
+      Script: {instanceID: 11254}
+    - Class: 114
+      Script: {instanceID: 11420}
     - Class: 114
       Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11504}
+      Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 11662}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 11896}
+      Script: {instanceID: 12438}
     - Class: 114
-      Script: {instanceID: 12482}
+      Script: {instanceID: 12746}
     - Class: 114
-      Script: {instanceID: 12790}
+      Script: {instanceID: 13110}
     - Class: 114
-      Script: {instanceID: 13150}
+      Script: {instanceID: 13126}
     - Class: 114
-      Script: {instanceID: 13166}
-    - Class: 114
-      Script: {instanceID: 13182}
+      Script: {instanceID: 13142}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -441,12 +438,6 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 1f1be0cf12c5844597395ecff95f6a3d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RankingManager
-  - hash:
-      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -573,7 +564,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: ce6aee8e32022054beb48943520af388
+      Hash: 82e10d613e19d95479e8f8098a3de60a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -663,6 +654,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 7ad6bdfb65329fdf97dd02152aa2fe15
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossLife
+  - hash:
+      serializedVersion: 2
       Hash: 219ec6059796d8951d2adcd8505d0dc2
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.CrossPlatformInput
@@ -679,6 +676,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: f49cae17d706f5f3fd4b5f1564e876a0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Boss
   - hash:
       serializedVersion: 2
       Hash: 8cd1cbba27f3cb1717254f668e9e0d5a
@@ -793,6 +796,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 382b6b7655b0ab4109086a0e6b701148
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoverBoss
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
