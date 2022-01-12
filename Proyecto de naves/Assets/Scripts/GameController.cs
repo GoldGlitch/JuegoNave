@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 {
     public GameObject[] hazards;
     public GameObject[] EnemyShips;
+    public GameObject[] Boss;
     public Vector3 spawnValues;
     public int hazardCount;
     public float spawnWait;
@@ -17,17 +18,23 @@ public class GameController : MonoBehaviour
     public int score;
     private int contadorAsteroides;
     private int enemyShipCount;
+    private int bossCount;
+
+
     private int contadorOleadas;
- 
-    
+    private int contadorOleadas2;
+
+
     public Text scoreText;
 
 
     public GameObject restartGameObject;
     public GameObject gameOverGameObject;
+    public GameObject winGameObject;
     public bool restart;
     public bool gameOver;
-    private bool EnterNameDialogSatate;
+    public bool Winner;
+    
     public GameObject menu;
     public bool MenuAbierto;
 
@@ -35,15 +42,20 @@ public class GameController : MonoBehaviour
     {
         contadorAsteroides = 3;
         enemyShipCount = 0;
-        
+        bossCount = 0;
+
+
+
         UpdatespawnValues();
         restart = false;
         gameOver = false;
+        Winner = false;
 
         MenuAbierto = false;
-        EnterNameDialogSatate = true;
+        
         gameOverGameObject.SetActive(false);
-        restartGameObject.SetActive(false);
+        winGameObject.SetActive(false);
+       restartGameObject.SetActive(false);
        StartCoroutine(SpawnWaves());
 
         score = 0;
@@ -73,13 +85,15 @@ public class GameController : MonoBehaviour
         {
             Time.timeScale = 0.2f;
         }
-        if (EnterNameDialogSatate == true)
-        {
-            Time.timeScale = 0f;
-        }
+       
         else if(MenuAbierto==false)
         {
             Time.timeScale = 1f;
+        }
+
+        if (Winner == true)
+        {
+            Time.timeScale = 0.2f;
         }
     }
     public void MenuPause()
@@ -100,7 +114,7 @@ public class GameController : MonoBehaviour
     {
         yield return new WaitForSeconds(startWait);
 
-        while (!gameOver)
+        while (!gameOver || !Winner)
         {
             
             for (int i = 0; i < contadorAsteroides/*hazardCount*/; i++)
@@ -124,11 +138,24 @@ public class GameController : MonoBehaviour
                     yield return new WaitForSeconds(spawnWait);
                 }
             }
-            
+            if (contadorOleadas2 == 10)
+            {
+                contadorOleadas2 = 0;
+                bossCount = bossCount + 1;
+                for (int i = 0; i < bossCount; i++)
+                {
+                    //GameObject hazard = hazards[Random.Range(0, hazards.Length)];
+                    GameObject enemyBoss = Boss[Random.Range(0, Boss.Length)];
+                    Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+                    Instantiate(enemyBoss, spawnPosition, Quaternion.identity);
+                    yield return new WaitForSeconds(spawnWait);
+                }
+            }
             yield return new WaitForSeconds(waveWait);
             contadorAsteroides = contadorAsteroides + 1;
             contadorOleadas = contadorOleadas + 1;
-           
+            contadorOleadas2 = contadorOleadas2 + 1;
+
 
 
         }
@@ -137,16 +164,18 @@ public class GameController : MonoBehaviour
 
 
     }
-    public void Close()
-    {
-        EnterNameDialogSatate = false;
-    }
+   
     public void GameOver()
     {
         gameOverGameObject.SetActive(true);
         
         gameOver = true;
 
+    }   
+    public void Win()
+    {
+        winGameObject.SetActive(true);
+        Winner = true;
     }
     public void MenuActive()
     {
@@ -160,9 +189,12 @@ public class GameController : MonoBehaviour
         score += value;
         UpdateScore();
     }
+
     void UpdateScore()
     {
         scoreText.text = "Score : "  + score;
     }
+
+
 
 }
