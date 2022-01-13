@@ -75,63 +75,63 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11234}
+      Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11306}
+      Script: {instanceID: 11254}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11324}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11420}
     - Class: 114
-      Script: {instanceID: 11514}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11634}
+      Script: {instanceID: 11582}
     - Class: 114
-      Script: {instanceID: 11672}
+      Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 11792}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 11952}
+      Script: {instanceID: 11900}
     - Class: 114
-      Script: {instanceID: 11972}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 12052}
+      Script: {instanceID: 12074}
     - Class: 114
-      Script: {instanceID: 12128}
+      Script: {instanceID: 12092}
     - Class: 114
-      Script: {instanceID: 12146}
+      Script: {instanceID: 12168}
     - Class: 114
-      Script: {instanceID: 12222}
+      Script: {instanceID: 12188}
     - Class: 114
-      Script: {instanceID: 12242}
+      Script: {instanceID: 12274}
     - Class: 114
-      Script: {instanceID: 12328}
+      Script: {instanceID: 12418}
     - Class: 114
-      Script: {instanceID: 12472}
+      Script: {instanceID: 12438}
     - Class: 114
-      Script: {instanceID: 12492}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12640}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 12756}
+      Script: {instanceID: 12746}
     - Class: 114
-      Script: {instanceID: 12800}
+      Script: {instanceID: 12780}
     - Class: 114
-      Script: {instanceID: 12834}
+      Script: {instanceID: 12956}
     - Class: 114
-      Script: {instanceID: 13010}
+      Script: {instanceID: 13066}
     - Class: 114
-      Script: {instanceID: 13120}
+      Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 13134}
+      Script: {instanceID: 13110}
     - Class: 114
-      Script: {instanceID: 13164}
+      Script: {instanceID: 13126}
     - Class: 114
-      Script: {instanceID: 13180}
+      Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 13196}
+      Script: {instanceID: 33608}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -182,27 +182,27 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11234}
+      Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11306}
+      Script: {instanceID: 11254}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11420}
     - Class: 114
-      Script: {instanceID: 11514}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11672}
+      Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 12492}
+      Script: {instanceID: 12438}
     - Class: 114
-      Script: {instanceID: 12800}
+      Script: {instanceID: 12746}
     - Class: 114
-      Script: {instanceID: 13164}
+      Script: {instanceID: 13110}
     - Class: 114
-      Script: {instanceID: 13180}
+      Script: {instanceID: 13126}
     - Class: 114
-      Script: {instanceID: 13196}
+      Script: {instanceID: 13142}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -478,12 +478,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.CrossPlatformInput
     className: Joystick
-  - hash:
-      serializedVersion: 2
-      Hash: 382b6b7655b0ab4109086a0e6b701148
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MoverBoss
   - hash:
       serializedVersion: 2
       Hash: 4bd1cc3c85989d2213a9a8fd9d09e63f
@@ -802,8 +796,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 382b6b7655b0ab4109086a0e6b701148
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoverBoss
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/ferna/Desktop/Juego De Naves/GAMEFINAL/FinalGame.aab
+  playerPath: C:/Users/Kenner/Desktop/Build/Amenaza.apk
